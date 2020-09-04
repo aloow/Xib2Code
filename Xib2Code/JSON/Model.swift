@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import SWXMLHash
 
 struct ViewControllerInfo {
     
@@ -29,6 +30,10 @@ struct ViewControllerInfo {
     
     init(withXib xibJson:JSON) {
         self.view = ViewInfo(json: xibJson["view"], type: "View")
+    }
+    
+    init(withXib xibXml:XMLIndexer) {
+        self.view = ViewInfo(xml: xibXml["view"], type: "View")
     }
     
     // .h文件
@@ -398,6 +403,52 @@ struct ViewInfo {
         
     }
     
+    init(xml: XMLIndexer, type: String) {
+        
+        self.id = xml.element?.attribute(by: "id")?.text ?? ""
+        
+        self.type = ViewType(rawValue: type) ?? .view
+        
+        let subXmlViews = xml["subviews"].children
+        subXmlViews.forEach { (xmlIndeter) in
+            subviews.append(ViewInfo(xml: xmlIndeter, type: xmlIndeter.element?.name ?? ""))
+        }
+      
+        image = xml.element?.attribute(by: "image")?.text ?? ""
+        
+        contentMode = ContentModeTpye(rawValue: xml.element?.attribute(by: "contentMode")?.text ?? "")
+            ?? .scaleAspectFit
+        
+        rest_y = Int(xml["rect"].element?.attribute(by: "y")?.text ?? "") ?? 0
+        
+        name = xml.element?.attribute(by: "userLabel")?.text ?? type
+        
+        // 有值则为vertical，无值是默认
+        if let _ = xml.element?.attribute(by: "axis")?.text {
+            axis = .vertical
+        }
+        spacing =  xml.element?.attribute(by: "spacing")?.text ?? "0"
+        
+        if let alignment = xml.element?.attribute(by: "alignment")?.text,
+            let distribution = xml.element?.attribute(by: "distribution")?.text {
+            self.alignment = AlignmentType(rawValue: alignment) ?? .fill
+            self.distribution = DistributionType(rawValue: distribution) ?? .fill
+        }
+        
+        text = xml.element?.attribute(by: "text")?.text
+        fontSize = xml["fontDescription"].element?.attribute(by: "pointSize")?.text
+        color = xml["color"].element?.attribute(by: "key")?.text
+        
+        title = xml["state"].element?.attribute(by: "title")?.text
+        bimage = xml["state"].element?.attribute(by: "image")?.text
+        // 约束
+        let constraintsXml = xml["constraints"].children
+        constraintsXml.forEach { (xml) in
+            constraints.append(Constraint(with: xml))
+        }
+        
+    }
+    
     //
     var hadSubviews: Bool {
         return !subviews.isEmpty
@@ -422,6 +473,14 @@ struct Constraint {
         secondAttribute = json["-secondAttribute"].string ?? ""
         constant = json["-constant"].string ?? ""
         id = json["-id"].string ?? ""
+    }
+    init(with xml:XMLIndexer) {
+        firstItem = xml.element?.attribute(by: "firstItem")?.text ?? ""
+        firstAttribute = xml.element?.attribute(by: "firstAttribute")?.text ?? ""
+        secondItem = xml.element?.attribute(by: "secondItem")?.text ?? ""
+        secondAttribute = xml.element?.attribute(by: "secondAttribute")?.text ?? ""
+        constant = xml.element?.attribute(by: "constant")?.text ?? ""
+        id = xml.element?.attribute(by: "id")?.text ?? ""
     }
 }
 

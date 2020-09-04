@@ -63,25 +63,22 @@ class ViewController: NSViewController {
     
     @IBAction func generateTap(_ sender: Any) {
         
-        
+        let inputString = inputTextView.string
+        if inputString.isEmpty {
+            return
+        }
+        xmlToFile(xmlString: inputString)
         
         
     }
     
-    @IBAction func selectFile(_ sender: Any) {
-        
-    }
     
     // String -> Json
     func jsonToFile(jsonString:String) {
         // MARK: xib
         // input string to json
-        let inputString = inputTextView.string
-        if inputString.isEmpty {
-            return
-        }
-
-        let xibJson = JSON(parseJSON: inputString)
+        
+        let xibJson = JSON(parseJSON: jsonString)
                     
         let vcJson = xibJson["document"]["objects"]
 
@@ -97,6 +94,67 @@ class ViewController: NSViewController {
         mFileName.stringValue = vcInfo.filemName
         moutputTextView.string = vcInfo.filem
     }
+    
+    // String -> Xml
+    func xmlToFile(xmlString:String) {
+       
+        let xibXml = SWXMLHash.parse(xmlString)
+                    
+        let vcXml = xibXml["document"]["objects"]
+
+        // self.viewControllerInfos.append(ViewControllerInfo(withXib: vcJson))
+
+        self.viewControllerInfo = ViewControllerInfo(withXib: vcXml)
+        
+        guard let vcInfo = self.viewControllerInfo else { return }
+
+        // 生成.h .m
+        hFileName.stringValue = vcInfo.filehName
+        houtputSTextView.string = vcInfo.fileh
+
+        mFileName.stringValue = vcInfo.filemName
+        moutputTextView.string = vcInfo.filem
+    }
+    
+    func getDataToXml(data:Data) {
+        let xibXml = SWXMLHash.parse(data)
+        
+        let vcXml = xibXml["document"]["objects"]
+
+        // self.viewControllerInfos.append(ViewControllerInfo(withXib: vcJson))
+
+        self.viewControllerInfo = ViewControllerInfo(withXib: vcXml)
+        
+        guard let vcInfo = self.viewControllerInfo else { return }
+
+        // 生成.h .m
+        hFileName.stringValue = vcInfo.filehName
+        houtputSTextView.string = vcInfo.fileh
+
+        mFileName.stringValue = vcInfo.filemName
+        moutputTextView.string = vcInfo.filem
+    }
+    
+    @IBAction func openJSONFiles(sender: AnyObject)
+    {
+        let oPanel: NSOpenPanel = NSOpenPanel()
+        oPanel.canChooseDirectories = false
+        oPanel.canChooseFiles = true
+        oPanel.allowsMultipleSelection = false
+        oPanel.allowedFileTypes = ["xib","xml"]
+        oPanel.prompt = "解析"
+        
+        oPanel.beginSheetModal(for: self.view.window!) { button in
+            if button.rawValue == NSApplication.ModalResponse.OK.rawValue {
+                let xmlPath = oPanel.urls.first!.path
+                let fileHandle = FileHandle(forReadingAtPath: xmlPath)
+                self.inputTextView.string = String(data: fileHandle!.readDataToEndOfFile(), encoding: .utf8) ?? ""
+                self.getDataToXml(data: fileHandle!.readDataToEndOfFile())
+                
+            }
+        }
+    }
+    
     
 }
 

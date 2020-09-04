@@ -730,7 +730,7 @@
                                                     <font key="font" metaFont="system" size="15"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="selectFile:" target="XfG-lQ-9wD" id="U8W-RX-7Vg"/>
+                                                    <action selector="openJSONFilesWithSender:" target="XfG-lQ-9wD" id="4Jd-Dv-cPx"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -874,10 +874,10 @@
                                 <rect key="frame" x="433" y="358" width="78" height="54"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-8e-dGH">
-                                        <rect key="frame" x="6" y="26" width="66" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Test" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="73c-1W-w94">
+                                        <rect key="frame" x="-6" y="26" width="90" height="32"/>
+                                        <buttonCell key="cell" type="push" title="&lt;&lt;-示例" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="73c-1W-w94">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" size="13" name=".SFNS-Regular"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="setupInputText:" target="XfG-lQ-9wD" id="cRs-EF-T7w"/>
