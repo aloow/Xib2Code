@@ -7,6 +7,7 @@ Xib2Code可以把项目中Xib文件转换成代码形式
 截图
 ========================
 选择文件进行转换
-
+![示例](https://github.com/aloow/Xib2Code/blob/master/aloowImage2.gif)
 
 支持直接输入xml格式的文本转换
+![示例](https://github.com/aloow/Xib2Code/blob/master/aloowImage1.gif)
