@@ -149,8 +149,7 @@ class ViewController: NSViewController {
                 let xmlPath = oPanel.urls.first!.path
                 let fileHandle = FileHandle(forReadingAtPath: xmlPath)
                 self.inputTextView.string = String(data: fileHandle!.readDataToEndOfFile(), encoding: .utf8) ?? ""
-                self.getDataToXml(data: fileHandle!.readDataToEndOfFile())
-                
+                self.xmlToFile(xmlString: self.inputTextView.string)
             }
         }
     }

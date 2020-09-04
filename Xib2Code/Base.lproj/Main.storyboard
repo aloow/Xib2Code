@@ -713,7 +713,7 @@
                                 <rect key="frame" x="20" y="20" width="405" height="730"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="24" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5n-SH-Ytt">
-                                        <rect key="frame" x="0.0" y="710" width="281" height="20"/>
+                                        <rect key="frame" x="0.0" y="710" width="379" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pQQ-2b-kim">
                                                 <rect key="frame" x="-2" y="0.0" width="185" height="20"/>
@@ -724,10 +724,10 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-cK-6g6">
-                                                <rect key="frame" x="205" y="1" width="76" height="19"/>
-                                                <buttonCell key="cell" type="roundRect" title="选择文件" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NVc-4s-6l3">
+                                                <rect key="frame" x="205" y="1" width="174" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="选择文件(.xml或者.xib)" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NVc-4s-6l3">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system" size="15"/>
+                                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="openJSONFilesWithSender:" target="XfG-lQ-9wD" id="4Jd-Dv-cPx"/>
@@ -877,7 +877,7 @@
                                         <rect key="frame" x="-6" y="26" width="90" height="32"/>
                                         <buttonCell key="cell" type="push" title="&lt;&lt;-示例" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="73c-1W-w94">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" size="13" name=".SFNS-Regular"/>
+                                            <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="setupInputText:" target="XfG-lQ-9wD" id="cRs-EF-T7w"/>
