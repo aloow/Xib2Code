@@ -3,17 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46FCC3FB600BD47FE69178DC /* Pods_Xib2Code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314D3262A0EC2550CC0331A5 /* Pods_Xib2Code.framework */; };
 		8838AD5A2500CEBE00A61075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8838AD592500CEBE00A61075 /* AppDelegate.swift */; };
 		8838AD5C2500CEBE00A61075 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8838AD5B2500CEBE00A61075 /* ViewController.swift */; };
 		8838AD5E2500CEC100A61075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8838AD5D2500CEC100A61075 /* Assets.xcassets */; };
 		8838AD612500CEC100A61075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8838AD5F2500CEC100A61075 /* Main.storyboard */; };
+		8838AD6F2500D4AB00A61075 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8838AD6A2500D4A300A61075 /* Model.swift */; };
+		8838AD702500D4B300A61075 /* Emtpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8838AD6D2500D4A300A61075 /* Emtpy.swift */; };
+		8838AD712500D4B500A61075 /* EnumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8838AD6C2500D4A300A61075 /* EnumHelper.swift */; };
+		8838AD732500D76200A61075 /* Vipsb.json in Resources */ = {isa = PBXBuildFile; fileRef = 8838AD722500D75A00A61075 /* Vipsb.json */; };
+		8838AD752500E1D700A61075 /* LineNumberRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8838AD742500E1D700A61075 /* LineNumberRulerView.swift */; };
+		8838AD7E2501C3C900A61075 /* Vipsb.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8838AD7D2501C17300A61075 /* Vipsb.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BC8B02F147BD964036EDA9D /* Pods-Xib2Code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xib2Code.release.xcconfig"; path = "Target Support Files/Pods-Xib2Code/Pods-Xib2Code.release.xcconfig"; sourceTree = "<group>"; };
+		314D3262A0EC2550CC0331A5 /* Pods_Xib2Code.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xib2Code.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8838AD562500CEBE00A61075 /* Xib2Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xib2Code.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8838AD592500CEBE00A61075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8838AD5B2500CEBE00A61075 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +30,13 @@
 		8838AD602500CEC100A61075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8838AD622500CEC100A61075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8838AD632500CEC100A61075 /* Xib2Code.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Xib2Code.entitlements; sourceTree = "<group>"; };
+		8838AD6A2500D4A300A61075 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8838AD6C2500D4A300A61075 /* EnumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHelper.swift; sourceTree = "<group>"; };
+		8838AD6D2500D4A300A61075 /* Emtpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emtpy.swift; sourceTree = "<group>"; };
+		8838AD722500D75A00A61075 /* Vipsb.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Vipsb.json; sourceTree = "<group>"; };
+		8838AD742500E1D700A61075 /* LineNumberRulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumberRulerView.swift; sourceTree = "<group>"; };
+		8838AD7D2501C17300A61075 /* Vipsb.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Vipsb.xml; sourceTree = "<group>"; };
+		9614672C9AD4E9119A821DFF /* Pods-Xib2Code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xib2Code.debug.xcconfig"; path = "Target Support Files/Pods-Xib2Code/Pods-Xib2Code.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +44,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FCC3FB600BD47FE69178DC /* Pods_Xib2Code.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4802BBDE4EED46F722E350E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				314D3262A0EC2550CC0331A5 /* Pods_Xib2Code.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8838AD4D2500CEBE00A61075 = {
 			isa = PBXGroup;
 			children = (
 				8838AD582500CEBE00A61075 /* Xib2Code */,
 				8838AD572500CEBE00A61075 /* Products */,
+				EE2EBF5442DB3684CCC15D65 /* Pods */,
+				4802BBDE4EED46F722E350E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +80,8 @@
 		8838AD582500CEBE00A61075 /* Xib2Code */ = {
 			isa = PBXGroup;
 			children = (
+				8838AD7A2500EA8A00A61075 /* Tool */,
+				8838AD692500D4A300A61075 /* JSON */,
 				8838AD592500CEBE00A61075 /* AppDelegate.swift */,
 				8838AD5B2500CEBE00A61075 /* ViewController.swift */,
 				8838AD5D2500CEC100A61075 /* Assets.xcassets */,
@@ -63,6 +92,35 @@
 			path = Xib2Code;
 			sourceTree = "<group>";
 		};
+		8838AD692500D4A300A61075 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				8838AD6A2500D4A300A61075 /* Model.swift */,
+				8838AD6C2500D4A300A61075 /* EnumHelper.swift */,
+				8838AD6D2500D4A300A61075 /* Emtpy.swift */,
+				8838AD7D2501C17300A61075 /* Vipsb.xml */,
+				8838AD722500D75A00A61075 /* Vipsb.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		8838AD7A2500EA8A00A61075 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				8838AD742500E1D700A61075 /* LineNumberRulerView.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		EE2EBF5442DB3684CCC15D65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9614672C9AD4E9119A821DFF /* Pods-Xib2Code.debug.xcconfig */,
+				2BC8B02F147BD964036EDA9D /* Pods-Xib2Code.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8838AD662500CEC100A61075 /* Build configuration list for PBXNativeTarget "Xib2Code" */;
 			buildPhases = (
+				C60879943B7E30722F30DA44 /* [CP] Check Pods Manifest.lock */,
 				8838AD522500CEBE00A61075 /* Sources */,
 				8838AD532500CEBE00A61075 /* Frameworks */,
 				8838AD542500CEBE00A61075 /* Resources */,
+				F115035EFBAFE967F6AB1024 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,6 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8838AD7E2501C3C900A61075 /* Vipsb.xml in Resources */,
+				8838AD732500D76200A61075 /* Vipsb.json in Resources */,
 				8838AD5E2500CEC100A61075 /* Assets.xcassets in Resources */,
 				8838AD612500CEC100A61075 /* Main.storyboard in Resources */,
 			);
@@ -128,12 +190,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C60879943B7E30722F30DA44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xib2Code-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F115035EFBAFE967F6AB1024 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xib2Code/Pods-Xib2Code-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xib2Code/Pods-Xib2Code-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xib2Code/Pods-Xib2Code-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8838AD522500CEBE00A61075 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8838AD752500E1D700A61075 /* LineNumberRulerView.swift in Sources */,
+				8838AD6F2500D4AB00A61075 /* Model.swift in Sources */,
+				8838AD702500D4B300A61075 /* Emtpy.swift in Sources */,
 				8838AD5C2500CEBE00A61075 /* ViewController.swift in Sources */,
+				8838AD712500D4B500A61075 /* EnumHelper.swift in Sources */,
 				8838AD5A2500CEBE00A61075 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +375,7 @@
 		};
 		8838AD672500CEC100A61075 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9614672C9AD4E9119A821DFF /* Pods-Xib2Code.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Xib2Code/Xib2Code.entitlements;
@@ -285,6 +394,7 @@
 		};
 		8838AD682500CEC100A61075 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC8B02F147BD964036EDA9D /* Pods-Xib2Code.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Xib2Code/Xib2Code.entitlements;

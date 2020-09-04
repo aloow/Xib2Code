@@ -1,0 +1,6 @@
+framework module Pods_Xib2Code {
+  umbrella header "Pods-Xib2Code-umbrella.h"
+
+  export *
+  module * { export * }
+}
